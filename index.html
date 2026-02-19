@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrookFord LLC — Software Development</title>
+    <meta name="description" content="BrookFord LLC builds mobile applications and software products focused on productivity, health, and professional tools.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF8;
+            --text: #1A1A18;
+            --muted: #6B6B63;
+            --accent: #2C2C2A;
+            --border: #E2E2DC;
+            --card-bg: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Nav */
+        nav {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: -0.3px;
+            color: var(--text);
+        }
+        .logo span {
+            color: var(--muted);
+            font-weight: 400;
+        }
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--text); }
+
+        /* Hero */
+        .hero {
+            padding: 80px 0 64px;
+        }
+        .hero h1 {
+            font-family: 'Newsreader', serif;
+            font-size: clamp(32px, 5vw, 44px);
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 17px;
+            color: var(--muted);
+            max-width: 540px;
+            line-height: 1.7;
+        }
+
+        /* Products */
+        .section {
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+        }
+        .section-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .product-grid {
+            display: grid;
+            gap: 16px;
+        }
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 28px 28px 24px;
+            transition: border-color 0.2s;
+        }
+        .product-card:hover {
+            border-color: #C8C8C0;
+        }
+        .product-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 6px;
+            letter-spacing: -0.2px;
+        }
+        .product-card .tag {
+            display: inline-block;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--muted);
+            background: var(--bg);
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .product-card p {
+            font-size: 15px;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        /* About */
+        .about-text {
+            font-size: 16px;
+            color: var(--muted);
+            line-height: 1.75;
+            max-width: 600px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+        .contact-item label {
+            display: block;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--muted);
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        .contact-item a, .contact-item span {
+            font-size: 15px;
+            color: var(--text);
+            text-decoration: none;
+        }
+        .contact-item a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            padding: 48px 0 40px;
+            border-top: 1px solid var(--border);
+            margin-top: 16px;
+        }
+        footer p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 480px) {
+            .hero { padding: 48px 0 40px; }
+            .section { padding: 36px 0; }
+            .product-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <div class="logo">BrookFord <span>LLC</span></div>
+        <a href="mailto:brookfordusa@gmail.com">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="container">
+        <h1>Software for professionals<br>who value simplicity.</h1>
+        <p>BrookFord LLC designs and develops mobile applications and software products focused on productivity, health, and professional tools.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-label">Products</div>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="tag">iOS App</div>
+                <h3>Sessionary</h3>
+                <p>A streamlined CRM for therapists in private practice. Simple client management, session tracking, and note-taking — with all data stored locally on device for complete privacy.</p>
+            </div>
+            <div class="product-card">
+                <div class="tag">iOS App</div>
+                <h3>PeptidePals</h3>
+                <p>A tracking and community app for the peptide and wellness community. Injection site rotation, dosing logs, and protocol management built for biohackers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-label">About</div>
+        <p class="about-text">BrookFord LLC is a software development company based in Massachusetts. We build focused, well-crafted tools that solve real problems for professional and health-conscious users. Our approach emphasizes privacy, simplicity, and reliability.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-label">Contact</div>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <label>Email</label>
+                <a href="mailto:brookfordusa@gmail.com">brookfordusa@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <label>Location</label>
+                <span>Massachusetts, USA</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 BrookFord LLC. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
